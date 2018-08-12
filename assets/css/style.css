@@ -1,3 +1,4 @@
+/*Grass background*/
 body {
     background-image: url(./grass.jpg);
     background-size: auto, cover; 
@@ -6,30 +7,31 @@ body {
 h1.display-4 {
     font-family: 'Luckiest Guy', cursive;
     font-size: 68px; 
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    text-align: center;
     font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
 }
 
 h2.display-4 {
     font-family: 'Luckiest Guy', cursive;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    text-align: center;
     font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
    
 }
 
 .jumbotron {
-    position: relative; 
-    top: 50px; 
-    color: green;
     border: 3px dashed black;
     background: grey;
-    width: 1200px;
-    position: relative;
+    color: green;
+    position: relative; 
+    top: 50px; 
     right: -150px;
+    width: 1200px;
 }
 
 img {
@@ -37,6 +39,7 @@ width: 500px;
 height: auto;
 position: relative;
 top: -20px;
+right:-15px;
 }
 
 p {
@@ -47,6 +50,7 @@ p {
     vertical-align: middle;
     text-align: center;
     font-size: 30px;
+    letter-spacing: 2px;
 }
 
 .col-md-6 {

@@ -1,24 +1,19 @@
 // Variables
-var wins = 0;
-var losses = 0;
-//Array containing all letters of the alphabet
-var letterChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-//Create array containing the words that will be used for the game
-var wordArray = ["dinger", "triple", "boomstick", "homer", "balk", "popup", "tootblan","double", "strikeout", "single", "walkoff", "doubleheader"];
-var guessesLeft = 9;
-var displayWord = "";
-var letterBank = [];
-//Variable for random word that is selected from the array
-var randomWord = "";
-//Empty array to store the letters of the chosen word
-var splitUpWord = [];
-var drawRandomWord = "";
-var storedGuess = [];
-var lettersAlreadyGuessed = "";
+var wins = 0; //Variable to hold win count
+var losses = 0; //Variable to hold loss count
+var letterChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]; //Array containing all letters of the alphabet
+var wordArray = ["dinger", "triple", "boomstick", "homer", "balk", "popup", "tootblan","double", "strikeout", "single", "walkoff", "doubleheader", "extras", "catcher", "closer"]; //Create array containing the words that will be used for the game
+var guessesLeft = 9; //Contains the total amount of guesses the user gets for the game
+var displayWord = ""; //Empty variable
+var letterBank = []; //Empty variable
+var randomWord = ""; //Variable for random word that is selected from the array
+var splitUpWord = []; //Empty array to store the letters of the chosen word
+var drawRandomWord = ""; //Empty variable
+var storedGuess = []; //Empty array that will contain all of the users letter guesses
+var lettersAlreadyGuessed = ""; //Empty variable
 var letterChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 // Select a random word from the array wordArray
-
 function chooseWord () {
     randomWord = wordArray[Math.floor(Math.random () * wordArray.length)];
     console.log(randomWord);
@@ -27,7 +22,6 @@ function chooseWord () {
     letterBank = [];
     lettersAlreadyGuessed = "";
     spacesWord();
-
 }
 
 // splits string of randomWord into an array consisting of each letter
@@ -88,7 +82,8 @@ else {
 		}
 		else if (letterBank.indexOf(userGuess) > -1) {
 			console.log(userGuess);
-		}
+        }
+        //If guesses run out, alert with a game over message and start the game over. Add a loss to the loss counter. 
 		else {
 			guessesLeft--;
 			letterBank.push(userGuess);
